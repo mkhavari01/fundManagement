@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "ea036d9c-1e72-450a-97b0-2d7b7dbbdd97",
+		"name": "fund Management",
+		"description": "This is an api collection for managing Funds for investing\n\nserver runs on port 3001",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20446635"
+	},
+	"item": [
+		{
+			"name": "Funds",
+			"item": [
+				{
+					"name": "get all funds data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/fund",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"fund"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one fund data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/fund/63dda5f666f517fb1dcedf0c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"fund",
+								"63dda5f666f517fb1dcedf0c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new fund",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJfaWQiOiI2M2RjYzdmYzRjZjY1NWM5MTVkNjgxNDAiLCJpYXQiOjE2NzU0MTM1MDAsImV4cCI6MTY3NjAxODMwMH0.5g-NcLZmKpvyVOR-NzXRAk_QofejQflHAPYP3mx3DL0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"fund name2\",\r\n    \"fundManager\":\"fund manager2\",\r\n    \"trusteeFund\":\"trustee fund2\",\r\n    \"auditor\":\"auditor 2\",\r\n    \"investManagers\":[{\r\n        \"name\" : \"invest manager 2\",\r\n        \"cv\" : \"here is short description of his cv 2\"\r\n    },{\r\n        \"name\" : \"invest manager 22\",\r\n        \"cv\" : \"here is short description of her cv2\"\r\n    }],\r\n    \"activityStartDate\":\"Fri Feb 03 2023 12:59:52 GMT+0330 (Iran Standard Time)\",\r\n    \"fundType\":\"fund Type2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/fund",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"fund"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit funds info",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJfaWQiOiI2M2RjYzdmYzRjZjY1NWM5MTVkNjgxNDAiLCJpYXQiOjE2NzU0MTM1MDAsImV4cCI6MTY3NjAxODMwMH0.5g-NcLZmKpvyVOR-NzXRAk_QofejQflHAPYP3mx3DL0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fundId\" : \"63dd549dba407b294f55948f\",\r\n    \"name\":\"fund name 3\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/fund",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"fund"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete fund",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJfaWQiOiI2M2RjYzdmYzRjZjY1NWM5MTVkNjgxNDAiLCJpYXQiOjE2NzU0MTM1MDAsImV4cCI6MTY3NjAxODMwMH0.5g-NcLZmKpvyVOR-NzXRAk_QofejQflHAPYP3mx3DL0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fundId\" : \"63dcd48640dbf78b3a772bc3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/fund",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"fund"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "get all users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one user data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user/63dda587d9a6be832f4732c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"63dda587d9a6be832f4732c8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"user\",\r\n    \"password\" : \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"user\",\r\n    \"password\" : \"user\",\r\n    \"role\" : \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user Transaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsIl9pZCI6IjYzZGRhYmNjNGI0OTJlYTdhMWZmNzBlZCIsImlhdCI6MTY3NTQ3MjY2MiwiZXhwIjoxNjc2MDc3NDYyfQ.k04AAmm0Mju7GT-F33LWfiiVSyOrx3kGMwArV7udfc4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"units\" : 1,\r\n    \"fundId\" : \"63dd549dba407b294f55948f\",\r\n    \"action\" : \"buy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register for fund",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsIl9pZCI6IjYzZGRhYmNjNGI0OTJlYTdhMWZmNzBlZCIsImlhdCI6MTY3NTQ3MTgyMCwiZXhwIjoxNjc2MDc2NjIwfQ.nJmqUk03WqNSyMecFVhI7meHfYEHM7juSRbDj-k1iKM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fundId\" : \"63dda5f666f517fb1dcedf0c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user/register-fund",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"register-fund"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJfaWQiOiI2M2RkYTU4N2Q5YTZiZTgzMmY0NzMyYzgiLCJpYXQiOjE2NzU0NzAyMTUsImV4cCI6MTY3NjA3NTAxNX0.xJVFKxzZTA-qPe4FrYw7j1m_TxubOA2EXKrHkXIpLq4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : \"63dda2c39d21cde030e63960\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invests",
+			"item": [
+				{
+					"name": "get all invests",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/invest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"invest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one invest data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/invest/63ddaa87c6290cde6088ab93",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"invest",
+								"63ddaa87c6290cde6088ab93"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new Invest and connecting to fund",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJfaWQiOiI2M2RjYzdmYzRjZjY1NWM5MTVkNjgxNDAiLCJpYXQiOjE2NzU0MTM1MDAsImV4cCI6MTY3NjAxODMwMH0.5g-NcLZmKpvyVOR-NzXRAk_QofejQflHAPYP3mx3DL0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fundId\" : \"63dda5f666f517fb1dcedf0c\",\r\n    \"investUnits\" : 1000,\r\n    \"remainedUnits\" : 100,\r\n    \"issuePrice\" : 2000,\r\n    \"cancelPrice\" : 1000,\r\n    \"statisticPrice\" : 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/invest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"invest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit invest data",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJfaWQiOiI2M2RjYzdmYzRjZjY1NWM5MTVkNjgxNDAiLCJpYXQiOjE2NzU0MTM1MDAsImV4cCI6MTY3NjAxODMwMH0.5g-NcLZmKpvyVOR-NzXRAk_QofejQflHAPYP3mx3DL0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"investId\" : \"63ddaa87c6290cde6088ab93\",\r\n    \"investUnits\" : 600,\r\n    \"remainedUnits\" : 200,\r\n    \"issuePrice\" : 2000,\r\n    \"cancelPrice\" : 1000,\r\n    \"statisticPrice\" : 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/invest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"invest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete invest",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJfaWQiOiI2M2RjYzdmYzRjZjY1NWM5MTVkNjgxNDAiLCJpYXQiOjE2NzU0MTM1MDAsImV4cCI6MTY3NjAxODMwMH0.5g-NcLZmKpvyVOR-NzXRAk_QofejQflHAPYP3mx3DL0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"investId\" : \"63dcf74d8396cb85f557e542\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/invest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"invest"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
